@@ -1,0 +1,177 @@
+conda ativate newStart      147page
+
+conda list
+
+conda install pandas
+
+conda install jupyter lab
+
+jupyter lab
+-----------------------------------------------------
+brew install python
+pip3 install jupyter jupyterlab
+가상환경 설치
+conda create -n python python
+conda create -n julia julia
+conda create -n sage sage
+conda env list
+
+conda activate python
+pip install numpy scipy sympy scikit-learn matplotlib pandas pandas-datareader h5py
+#conda install -c apple tensorflow-deps # if osx_arm64
+pip install tensorflow tensorflow-macos tensorflow-metal # TensowFlow
+pip install torch torchvision # Pytorch
+pip install jupyter jupyterlab
+jupyter kernelspec install-self --user
+jupyter kernelspec list # Python kernel 변경 확인
+vi ~/Library/Jupyter/kernels/python3/kernel.json # Python 3.XX 로 디스플레이 이름 변경
+
+
+conda activate julia
+pip3 install jupyterlab
+julia
+julia> using Pkg
+julia> Pkg.add("IJulia")
+julia> Pkg.update()
+julia> using IJulia
+julia> installkernel("Julia")
+julia> exit()
+출처: https://blog.hshin.info/ [Ens, New Start:티스토리]
+
+++++++++++++++++++++++++++++++++++++++
+
+개발환경( 인프라 개발: 개발자들의 개발환경을  구성하고 관리)
+
+파이썬 개발환경
+아나콘다에서 파이썬의 다양한 라이브러리르 관리하고 
+(솔루션에 맞는 데이터 개발자들의
+
+1.아나콘다 개발환경 구성
+
+conda create --name newStart python==3.9
+
+2 개발환경 목록 보기
+conda env list
+3. 만들어진 개발환경으로 접속하기
+
+4. 접속한 개발환경의 패키지 목록 보기
+conda list
+5. 설치할 패키지
+conda install jupyter lab
+사이킷런 pip install sklearn
+
+6. 주피터 랩 실행  +++++ conda activate newPandas
+인터넷으로 실행 파일 연결. jupyter lab
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*개발환경 (인프라 개발 : 개발자들의 개발환경을 구성하고 관리)
+*파이썬 개발환경
+아나콘다에서 파이썬의 다양한 라이브러리를 관리하고, 
+(솔루션에 맞는 데이터 개발자들의 개발환경을 직관적으로 구성)하기 위한
+개발환경 패키지
+
+1. 아나콘다 개발환경 구성
+윈도우 키 > anaconda prompt 
+conda create --name newStart python==3.9
+
+2. 개발환경 목록 보기
+conda env list
+
+3. 만들어진 개발환경으로 접속하기
+conda activate newStart
+
+4. 접속한 개발환경의 패키지 목록 보기
+conda list
+
+5. 설치할 패키지
+conda install jupyterlab
+conda install seaborn
+pip install sklearn
+conda install openpyxl
+pip install folium
+
+6. 주피터 랩 실행
+jupyter lab
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+# 회원가입 만들기
+#1. id, pw, name 변수의 값을 저장하는 데이터 프레임을 만드시오
+#dataFrame()으로 df 변수 만들어서 안에 컬럼(id,pw,name) 넣기
+#2. id,pw,name 값을 받는 메서드를 만들고, df(데이터프레임)에 저장하는 기능 구현
+#3. id값을 찾아서 같은 id값이면 '같은 아이디가 있습니다.' 출력하는 메서드 구현
+#if문으로 id값 같은지 찾은 뒤, 문자열 출력
+#4. id값을 찾아서 그 row의 pw의 값을 변경하는 메서드 구현
+#funcUpdate메서드를 참고해서 값을 변경하는 기능을 구현하시면 됩니다.
+
++++++++++++++++++++20220213_ file 정리 강의중+++++++++++++++++++++++++++++
+]
+pandas - 데이터 2중 배열. sklearn mlpclassfile
+
+
+-------------------------------------------참고 사이트-------------------------------------------------
+
+https://www.tensorflow.org/js
+
+https://towardsdatascience.com/image-classification-of-pcbs-and-its-web-application-flask-c2b26039924a?gi=ab2bf28c9448
+
+https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification
+
+https://www.kaggle.com/learn/python
+
+https://dacon.io/
+
+
+
+++++++++++++++공통과제(?)+++++++++++++++++++++++++++++++++
+
+티스토리 블로그 개설 및 활동 시작 (프로그래밍 관련) / 주제 상관 없음
+개인 노트북에 깃-깃허브 연동
+
+그동안 배운 내용 모두 정리하여 깃허브에 업로드 및 설명자료 추가
+
+참조 :  https://github.com/wonyoung-ji/asiae_edu
+참조 : https://github.com/ne-choi/resume
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
