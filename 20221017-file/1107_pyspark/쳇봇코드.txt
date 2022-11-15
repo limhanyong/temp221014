@@ -1,0 +1,53 @@
+$(document)
+.ready(function(){
+	getList();
+})
+function getList(){
+	$.post('http://localhost:8080/loadMenu',{},function(rcv){
+		$('#selMenu').empty();
+		for(i=0; i<rcv.length; i++){
+			let str='<option>'+rcv[i]['id']+', '+rcv[i]['name']+', '+rcv[i]['price']+'</option>';
+			$('#selMenu').append(str);
+		}
+		$('#btnEmpty').trigger('click');
+	},'json');
+}
+
+/* function orderList(){
+	$.post('http://localhost:8080/loadMenu',{},function(rcv){
+		$('#selOrder').empty();
+		for(i=0; i<rcv.length; i++){
+			let str='<option>'+rcv[i]['id']+', '+rcv[i]['name']+', '+rcv[i]['price']+'</option>';
+			$('#selOrder').append(str);
+		}
+		$('#btnOrder').trigger('click');
+	},'json');
+} */
+.on('click','#selMenu option',function(){
+	let optstr=$(this).text();
+	let ar=optstr.split(',');
+	console.log(ar); //['2',' Americano',' 2700']
+	$('#id').val(ar[0]);
+	$('#name').val($.trim(ar[1]));
+	$('#price').val($.trim(ar[2]));
+	$('#qty').val($.trim(ar[3]));
+	return false;
+})
+
+
+.on('click','#btnOrder',function(){
+	if($('#name').val()=='' || $('#name').val()==null) {
+		alert('메뉴명은 반드시 입력해야 합니다.');
+		return false;
+	}
+	if($('#price').val()=='' || $('#price').val()==null || isNaN($('#price').val())){
+		alert('가격은 반드시 숫자로 입력해야 합니다.');
+		return false;
+	}
+	if($('#qty').val()!='0'){ //계산부분
+		$.post('http://localhost:8080/loadMenu',{name:$('#name').val(),($('#qty').val()*price:$('#price').val(),price:$('#price').val()}))
+		
+		return false;
+	
+})
+
