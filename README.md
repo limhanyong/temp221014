@@ -6,3 +6,4 @@ git add .
 git commit -m "Files: Updated"
 git push
 
+git push %% git heroku push
